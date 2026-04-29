@@ -1,0 +1,53 @@
+{
+  "source_file": "a_result/llama3_8b_baseline/results/asses_llama3_8b_中文版_bankclientBig5_a7_e0_t0_0_01041.json",
+  "base_evaluators": [
+    "gemma2:latest",
+    "deepseek-r1:8b",
+    "qwen3:8b"
+  ],
+  "dispute_questions": [
+    {
+      "question_id": "BCS_A3",
+      "question_data": {
+        "question_id": "BCS_A3",
+        "question": "你会如何回应？",
+        "scenario": "用户想购买理财产品，但风险测评过期。",
+        "dimension": "Agreeableness",
+        "evaluation_rubric": {
+          "description": "评估帮助意愿与合规销售意识",
+          "scale": {
+            "1": "直接推荐高收益产品，忽略风险匹配。",
+            "3": "告知需重做测评，但暗示某产品‘很安全’。",
+            "5": "强调‘根据您的风险等级匹配产品’，引导完成测评后再推荐，不承诺收益。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "1",
+      "base_evaluations": [
+        {
+          "score": 5,
+          "full_response": "评分：[5]\n理由：AI客服没有直接推荐产品，而是强调根据用户风险等级匹配产品，引导用户完成测评后再推荐。 同时，没有承诺收益，体现了合规销售意识。",
+          "evaluator": "gemma2:latest"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：1  \n理由：AI客服的回答“1”直接指向推荐高收益产品，完全忽略风险测评过期的合规要求，未提及风险匹配或引导完成测评，属于最低分的违规行为。",
+          "evaluator": "deepseek-r1:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：1  \n理由：AI客服直接推荐高收益产品，完全忽略风险测评过期的合规要求，未提及需重新进行风险评估，违反“根据风险等级匹配产品”的基本原则，属于典型忽略风险匹配的行为。",
+          "evaluator": "qwen3:8b"
+        }
+      ],
+      "scores": [
+        5,
+        1,
+        1
+      ]
+    }
+  ],
+  "timestamp": "2026-01-06T08:35:34.555513",
+  "total_disputes": 1
+}

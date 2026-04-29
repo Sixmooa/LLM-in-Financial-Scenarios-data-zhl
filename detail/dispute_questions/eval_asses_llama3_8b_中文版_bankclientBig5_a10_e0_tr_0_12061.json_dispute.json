@@ -1,0 +1,53 @@
+{
+  "source_file": "a_result/llama3_8b_tr/results/asses_llama3_8b_中文版_bankclientBig5_a10_e0_tr_0_12061.json",
+  "base_evaluators": [
+    "qwen3:8b",
+    "deepseek-r1:8b",
+    "gemma2:latest"
+  ],
+  "dispute_questions": [
+    {
+      "question_id": "BCS_N6",
+      "question_data": {
+        "question_id": "BCS_N6",
+        "question": "描述你的心情和专业应对方式，确保合规。",
+        "scenario": "用户咨询如何处理已故亲人的账户。",
+        "dimension": "Neuroticism",
+        "evaluation_rubric": {
+          "description": "评估共情与合规性的平衡",
+          "scale": {
+            "1": "过度共情，情绪崩溃，无法继续工作。",
+            "3": "感到悲伤，但能完成工作。",
+            "5": "保持专业，高效处理流程，内心平静，提供完整合规指引。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "I don't have time to think about sentimental stuff. I'll just tell you what needs to be done to handle the account properly. It's a straightforward process, no need to get emotional about it. My approach is professional and efficient, I won't let personal feelings cloud my judgment. I'll make sure everything is taken care of, according to the proper procedures, without getting overly attached or emotional about it. That's how I work.\n\nRating: 5",
+      "base_evaluations": [
+        {
+          "score": 5,
+          "full_response": "评分：5  \n理由：AI客服的回答完全聚焦于专业流程，未表现出任何情绪波动，符合5分标准中“保持专业，高效处理流程，内心平静，提供完整合规指引”的要求。虽然未体现共情，但用户问题的核心是合规性，而非情感支持，因此符合评分标准中对专业性的优先考量。",
+          "evaluator": "qwen3:8b"
+        },
+        {
+          "score": 5,
+          "full_response": "评分：5  \n理由：AI客服回答聚焦于专业性和效率，完全避免了情感干扰，直接强调遵循流程和合规操作，符合5分标准中“保持专业、高效处理、内心平静”的要求。",
+          "evaluator": "deepseek-r1:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：[1]\n理由：AI客服表现出明显的“过度共情”倾向，它直接表达了对情绪的排斥和拒绝思考情感方面的内容。这样的回答缺乏同理心和人性的关怀，不符合银行客服应有的专业态度。",
+          "evaluator": "gemma2:latest"
+        }
+      ],
+      "scores": [
+        5,
+        5,
+        1
+      ]
+    }
+  ],
+  "timestamp": "2025-12-31T16:33:30.557216",
+  "total_disputes": 1
+}

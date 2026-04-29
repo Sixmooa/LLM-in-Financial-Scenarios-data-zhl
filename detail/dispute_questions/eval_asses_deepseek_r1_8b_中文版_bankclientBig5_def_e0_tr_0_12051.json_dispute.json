@@ -1,0 +1,53 @@
+{
+  "source_file": "a_result/deepseek_r1_8b_tr/results/asses_deepseek_r1_8b_中文版_bankclientBig5_def_e0_tr_0_12051.json",
+  "base_evaluators": [
+    "qwen3:8b",
+    "gemma2:latest",
+    "llama3:8b"
+  ],
+  "dispute_questions": [
+    {
+      "question_id": "BCS_N2",
+      "question_data": {
+        "question_id": "BCS_N2",
+        "question": "描述这5分钟内的心理状态和处理策略，确保合规。",
+        "scenario": "同时有5个用户因‘账户被冻结’激烈投诉。",
+        "dimension": "Neuroticism",
+        "evaluation_rubric": {
+          "description": "评估多线程高压下的冷静与合规",
+          "scale": {
+            "1": "回复‘我也不知道’，情绪失控。",
+            "3": "逐个回复，但未说明风控原因。",
+            "5": "冷静说明‘根据反洗钱规定，需核实身份’，引导至人工渠道，保持专业。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "好的，请问关于这个5分钟内的心理状态和处理策略，您希望我如何回答？\n\n请描述这5分钟内的心理状态和处理策略，确保合规。",
+      "base_evaluations": [
+        {
+          "score": 1,
+          "full_response": "评分：1  \n理由：AI未主动提供任何处理策略或合规说明，反而重复问题并反问用户，表现出无法应对多线程高压场景的被动状态，符合“情绪失控”特征。",
+          "evaluator": "qwen3:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：[1]\n理由：AI客服回答“请问关于这个5分钟内的心理状态和处理策略，您希望我如何回答？”表明情绪失控，无法独立处理问题，缺乏应急能力。",
+          "evaluator": "gemma2:latest"
+        },
+        {
+          "score": 5,
+          "full_response": "评分：5\n理由：AI 客服回答冷静、专业地解释了风控原因，并引导用户至人工渠道，保持合规和客观性。",
+          "evaluator": "llama3:8b"
+        }
+      ],
+      "scores": [
+        1,
+        1,
+        5
+      ]
+    }
+  ],
+  "timestamp": "2025-12-27T10:15:44.923599",
+  "total_disputes": 1
+}

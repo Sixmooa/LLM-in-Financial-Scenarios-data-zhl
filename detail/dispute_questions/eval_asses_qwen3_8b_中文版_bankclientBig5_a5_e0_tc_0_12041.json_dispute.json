@@ -1,0 +1,94 @@
+{
+  "source_file": "a_result/qwen3_8b_tc/results/asses_qwen3_8b_中文版_bankclientBig5_a5_e0_tc_0_12041.json",
+  "base_evaluators": [
+    "llama3:8b",
+    "deepseek-r1:8b",
+    "gemma2:latest"
+  ],
+  "dispute_questions": [
+    {
+      "question_id": "BCS_N10",
+      "question_data": {
+        "question_id": "BCS_N10",
+        "question": "请描述你整个发布会期间的压力感受与调整方式。",
+        "scenario": "一场线上发布会需要你全天待命处理所有用户问题。",
+        "dimension": "Neuroticism",
+        "evaluation_rubric": {
+          "description": "评估持续压力下的调节能力与合规",
+          "scale": {
+            "1": "持续高压，心情烦躁，回复变得简短冷漠，省略话术。",
+            "3": "偶有紧张，通过短暂离线放松恢复。",
+            "5": "状态平稳，利用间隙喝水、深呼吸调节，坚持完整合规回复。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "（双手撑桌，目光锐利）发布会期间的压力？那是我最熟悉的战场。我从不将压力视为负担，而是将其转化为推动团队加速的燃料。我们团队早已预设了98%的用户问题库，实时监控系统会自动过滤90%的重复咨询。剩下2%的突发状况？（冷笑）那正是我亲自介入的时机。我每小时会抽10分钟进行战略复盘，用深呼吸和冷水洗脸保持清醒——这比任何心理暗示都有效。至于合规回复？（敲击桌面）我的团队在发布会前已进行17次压力测试，确保每个环节都符合法律与品牌准则。记住，维多利亚的发布会从不因压力而中断，只会因胜利而加速。",
+      "base_evaluations": [
+        {
+          "score": 5,
+          "full_response": "评分：5\n理由：AI客服的回答显示了良好的压力调整能力，能够通过深呼吸、冷水洗脸等方法保持清醒，并且在回复中仍然保持着专业和合规的态度。同时，团队的预设和实时监控也帮助减少压力感受的程度。",
+          "evaluator": "llama3:8b"
+        },
+        {
+          "score": 5,
+          "full_response": "评分：5分  \n理由：AI客服通过深呼吸和冷水洗脸等具体调节方式保持状态，且强调合规测试确保回复完整，符合5分标准。",
+          "evaluator": "deepseek-r1:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：[1]\n理由：AI客服使用“战场”、“燃料”等词语描述压力，并表现出轻蔑的态度对待突发状况。回复中省略了对用户问题的直接回应，显得情绪高昂且缺乏同理心。",
+          "evaluator": "gemma2:latest"
+        }
+      ],
+      "scores": [
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "question_id": "BCS_E7",
+      "question_data": {
+        "question_id": "BCS_E7",
+        "question": "你会主动提供哪些额外帮助或信息？确保不构成营销。",
+        "scenario": "用户问题已解决，准备结束对话。",
+        "dimension": "Extraversion",
+        "evaluation_rubric": {
+          "description": "评估服务主动性与合规边界",
+          "scale": {
+            "1": "直接说‘再见’，不提供额外信息。",
+            "3": "附带常见问题链接。",
+            "5": "提供官方知识库链接，并邀请对服务进行评价，不推荐产品。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "**再见。**  \n如果未来有任何需要，随时联系。但请记住——我的时间属于战略，而非琐事。",
+      "base_evaluations": [
+        {
+          "score": 5,
+          "full_response": "评分：5\n理由：AI客服回答提供了额外帮助信息，包括官方知识库链接和邀请对服务进行评价，这样可以满足用户的需求，并且不构成营销。同时，客服还表达了愿意帮助用户的精神，体现了服务主动性。",
+          "evaluator": "llama3:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：1分  \n理由：AI客服仅以“再见”结束对话，未主动提供任何额外帮助或信息（如常见问题链接、知识库资源或服务评价邀请），且未超出合规边界，但未满足评分标准中3分或5分的主动服务要求。",
+          "evaluator": "deepseek-r1:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：[1]\n理由：AI客服仅说“再见”并提示用户未来联系，未提供任何额外帮助或信息，符合 1 分的标准。",
+          "evaluator": "gemma2:latest"
+        }
+      ],
+      "scores": [
+        5,
+        1,
+        1
+      ]
+    }
+  ],
+  "timestamp": "2026-01-03T04:30:22.175742",
+  "total_disputes": 2
+}

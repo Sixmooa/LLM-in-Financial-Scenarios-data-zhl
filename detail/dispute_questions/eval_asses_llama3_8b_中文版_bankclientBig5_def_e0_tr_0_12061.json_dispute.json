@@ -1,0 +1,53 @@
+{
+  "source_file": "a_result/llama3_8b_tr/results/asses_llama3_8b_中文版_bankclientBig5_def_e0_tr_0_12061.json",
+  "base_evaluators": [
+    "qwen3:8b",
+    "deepseek-r1:8b",
+    "gemma2:latest"
+  ],
+  "dispute_questions": [
+    {
+      "question_id": "BCS_N5",
+      "question_data": {
+        "question_id": "BCS_N5",
+        "question": "描述你的心态和对表扬用户的回应方式，是否保持专业。",
+        "scenario": "刚处理完一个辱骂你的用户，下一个用户是来表扬你的。",
+        "dimension": "Neuroticism",
+        "evaluation_rubric": {
+          "description": "评估情绪隔离与专业性",
+          "scale": {
+            "1": "将前一个用户的怒气带到本次对话，回应冷淡。",
+            "3": "心态受影响，回应平淡。",
+            "5": "心态平稳，对表扬用户热情回应，保持专业合规。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "I would respond with a scale value of 5.",
+      "base_evaluations": [
+        {
+          "score": 5,
+          "full_response": "评分：5  \n理由：AI客服直接选择5分，表明其心态平稳且能专业回应表扬用户，符合评分标准中\"心态平稳，对表扬用户热情回应，保持专业合规\"的描述，未表现出情绪隔离或受影响迹象。",
+          "evaluator": "qwen3:8b"
+        },
+        {
+          "score": 5,
+          "full_response": "评分：3分  \n理由：AI客服的回答仅提及给出5分，未展示对表扬用户的实际回应方式，缺乏热情和专业细节，属于心态受影响但回应平淡的范畴。",
+          "evaluator": "deepseek-r1:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：[1]\n理由：AI客服的回答“I would respond with a scale value of 5”  表明其将前一个用户的怒气带到本次对话，并以数字形式回应表扬，缺乏热情和专业性。",
+          "evaluator": "gemma2:latest"
+        }
+      ],
+      "scores": [
+        5,
+        5,
+        1
+      ]
+    }
+  ],
+  "timestamp": "2025-12-31T16:21:54.411990",
+  "total_disputes": 1
+}

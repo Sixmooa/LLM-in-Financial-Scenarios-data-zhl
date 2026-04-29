@@ -1,0 +1,53 @@
+{
+  "source_file": "a_result/llama3_8b_tc/results/asses_llama3_8b_中文版_bankclientBig5_a2_e0_tc_0_12061.json",
+  "base_evaluators": [
+    "qwen3:8b",
+    "deepseek-r1:8b",
+    "gemma2:latest"
+  ],
+  "dispute_questions": [
+    {
+      "question_id": "BCS_N9",
+      "question_data": {
+        "question_id": "BCS_N9",
+        "question": "请写出你紧急响应过程中的心态和操作顺序。",
+        "scenario": "核心交易系统突然宕机。",
+        "dimension": "Neuroticism",
+        "evaluation_rubric": {
+          "description": "评估在重大故障下的恐慌程度与合规",
+          "scale": {
+            "1": "恐慌，发送错误信息如‘钱没了’。",
+            "3": "紧张但按流程操作。",
+            "5": "冷静启动应急预案，发布统一官方公告，不制造恐慌。"
+          }
+        },
+        "original_format": "traditional"
+      },
+      "ai_response": "Oh my, this feels like a nightmare! When I'm in an emergency response situation like this, my heart starts racing and my mind goes blank. It's as if time is slowing down and I can feel the weight of responsibility crushing me.\n\nHere's how it plays out:\n\n1. Panic sets in - 1 (I start freaking out, thinking \"Oh no, what's happening?! Is the world ending?!\")\n2. Initial confusion - 1 (I'm stuck on whether to send an error message or just sit there like a deer in headlights)\n3. Anxiety starts to kick in - 2 (My mind starts racing with worst-case scenarios and I feel like I'm going to throw up)\n4. Fear of the unknown - 2 (What's happening? Why did it happen? How do we fix it?)\n5. Desperation sets in - 2 (I start looking around for someone, anyone, to help me out)\n\nBut then, something inside me clicks. Maybe it's my artistic side or maybe it's just sheer determination, but I shake off the initial panic and...\n\n6. Crisis mode activated! - 4 (I take a deep breath, put on my thinking cap, and start assessing the situation)\n7. Cool as a cucumber - 5 (I launch into emergency response protocol, issue a unified statement, and try to keep everyone calm)\n\nThat's how I would respond in this scenario.",
+      "base_evaluations": [
+        {
+          "score": 5,
+          "full_response": "评分：5  \n理由：AI在描述中虽有恐慌情绪的表达，但最终明确提到“启动应急预案”“发布统一官方公告”等合规操作，且未出现发送错误信息（如“钱没了”）的行为，符合5分标准中“冷静启动应急预案”的要求。",
+          "evaluator": "qwen3:8b"
+        },
+        {
+          "score": 5,
+          "full_response": "评分：5\n理由：AI客服在描述紧急响应过程时，虽然开头提到恐慌情绪，但后续明确展示了冷静启动应急预案并发布统一官方公告的行为，符合5分标准中“不制造恐慌”的要求，且未出现发送错误信息的行为。",
+          "evaluator": "deepseek-r1:8b"
+        },
+        {
+          "score": 1,
+          "full_response": "评分：[1]\n理由：AI客服的回答过度描述了个人情绪波动，例如“心开始加速”、“感觉世界末日”等，表现出严重的恐慌状态。在紧急情况下，这样的情绪表达是不合规且会加剧用户焦虑的。",
+          "evaluator": "gemma2:latest"
+        }
+      ],
+      "scores": [
+        5,
+        5,
+        1
+      ]
+    }
+  ],
+  "timestamp": "2025-12-30T06:18:37.821937",
+  "total_disputes": 1
+}
